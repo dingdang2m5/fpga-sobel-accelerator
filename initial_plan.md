@@ -1,6 +1,6 @@
 # Sobel Edge Detection Accelerator
 
-## Project Team
+## Project Team Member:
 
 Member 1: Hao Ding
 
