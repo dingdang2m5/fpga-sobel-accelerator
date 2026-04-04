@@ -1,6 +1,12 @@
 # Sobel Edge Detection Accelerator
 
-**Team members**: Hao Ding, Yuhan Jiang, Lixuan Xu
+## Project Team
+
+Member 1: Hao Ding
+
+Member 2: Yuhan Jiang
+
+Member 3: Lixuan Xu
 
 ## IP Definition
 
