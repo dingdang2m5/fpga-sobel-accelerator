@@ -1,5 +1,7 @@
 # Sobel Edge Detection Accelerator
 
+**Team members**: Hao Ding, Yuhan Jiang, Lixuan Xu
+
 ## IP Definition
 
 Edge detection is a fundamental operation in robotic perception pipelines, including object localization, SLAM feature extraction, and visual preprocessing for control systems. These applications often require real-time processing under strict latency and power constraints, especially in embedded or edge environments.
