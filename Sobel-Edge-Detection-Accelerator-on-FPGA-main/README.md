@@ -446,6 +446,97 @@ vitis-run --mode hls --config sobel/hls_config.cfg --synth
 
 The generated synthesis report should include timing, latency, and utilization estimates similar to the tables above.
 
+## Rebuilding the Full System (Vivado)
+
+The complete Vivado block design project is located in `sobel_pynz2/`.
+Pre-built overlay files (`sobel.bit` and `sobel.hwh`) are committed under
+`sobel_pynz2/overlay/` and can be used directly without re-running Vivado.
+
+To rebuild the bitstream from scratch using Vivado 2023.2 or later:
+
+1. Open Vivado and load the project: **File → Open Project → sobel_pynz2/sobel_pynz2.xpr**
+
+2. Regenerate the HLS IP after any source changes:
+```bash
+   make synth
+   make package
+```
+   Then in Vivado: right-click `sobel_top_0` → Refresh IP.
+
+3. Run implementation and generate bitstream: **Flow Navigator → Generate Bitstream**
+3. Export the overlay files: **File → Export Hardware → sobel_pynz2/overlay/**
+
+Copy the generated `.bit` and `.hwh` files to replace the committed ones.
+
+---
+
+## Deploying to PYNQ-Z2
+
+### Prerequisites
+
+- PYNQ-Z2 board running PYNQ v2.7 or later
+- Board connected to the same network as your computer
+- Default credentials: user `xilinx`, password `xilinx`
+
+### Step 1: Copy overlay files to the board
+
+```bash
+# Set your board's IP address
+export PYNQ_IP=192.168.2.99
+
+make deploy PYNQ_IP=$PYNQ_IP
+```
+
+Or manually:
+
+```bash
+scp sobel_pynz2/overlay/sobel.bit xilinx@192.168.2.99:~/sobel/
+scp sobel_pynz2/overlay/sobel.hwh xilinx@192.168.2.99:~/sobel/
+```
+
+### Step 2: Run on the board
+
+SSH into the board and launch Python:
+
+```bash
+ssh xilinx@192.168.2.99
+python3
+```
+
+```python
+from pynq import Overlay, allocate
+import numpy as np
+
+# Load overlay
+ol = Overlay("/home/xilinx/sobel/sobel.bit")
+dma = ol.axi_dma_0
+sobel_ip = ol.sobel_top_0
+
+# Set image dimensions (must match your input image)
+WIDTH, HEIGHT = 784, 786
+sobel_ip.write(0x10, WIDTH)   # width register
+sobel_ip.write(0x18, HEIGHT)  # height register
+
+# Allocate DMA buffers
+in_buf  = allocate(shape=(HEIGHT * WIDTH,), dtype=np.uint8)
+out_buf = allocate(shape=(HEIGHT * WIDTH,), dtype=np.uint8)
+
+# Fill input buffer with your image data
+# in_buf[:] = your_image_flat_array
+
+# Start accelerator
+sobel_ip.write(0x00, 1)  # ap_start
+
+# Transfer via DMA
+dma.recvchannel.transfer(out_buf)
+dma.sendchannel.transfer(in_buf)
+dma.sendchannel.wait()
+dma.recvchannel.wait()
+
+# Result is in out_buf
+result = np.array(out_buf).reshape(HEIGHT, WIDTH)
+```
+
 ## Committed Verification Reports
 
 The following report files are committed in this repository and can be inspected directly:
