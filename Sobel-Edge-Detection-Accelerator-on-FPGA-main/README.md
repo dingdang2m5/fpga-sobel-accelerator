@@ -357,6 +357,15 @@ At the 125 MHz target clock, an II=1 design corresponds to a theoretical steady-
 
 The project can be rebuilt using **Vitis HLS 2025.2**.
 
+### Quick Start (Makefile)
+
+```bash
+make csim    # Run C simulation
+make synth   # Run C synthesis
+make cosim   # Run RTL co-simulation
+make all     # Run csim + synth
+```
+
 ### Source Files
 
 ```text
