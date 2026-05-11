@@ -1,0 +1,88 @@
+---
+MainSourceFile:  'C:/Users/57778/Desktop/sobel/sobel/sobel_top/hls/.autopilot/db/sobel_ref.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          284163
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          284634
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          285106
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          630502
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_17_1:  '
+      FilePath:        'C:\Users\57778\Desktop\sobel\src\sobel_ref.cpp'
+      FileOffset:      17
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          2250995
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_17_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_21_2:  '
+      FilePath:        'C:\Users\57778\Desktop\sobel\src\sobel_ref.cpp'
+      FileOffset:      21
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          2251069
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_21_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_22_3:  '
+      FilePath:        'C:\Users\57778\Desktop\sobel\src\sobel_ref.cpp'
+      FileOffset:      22
+      Replacements:
+        - FilePath:        'C:\Users\57778\Desktop\sobel\sobel\sobel_top\hls\.autopilot\db\sobel_ref.pp.0.cpp'
+          Offset:          2251112
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_22_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\Users\57778\Desktop\sobel\sobel'
+...

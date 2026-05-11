@@ -1,0 +1,160 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\57778\\Desktop\\sobel\\sobel\\sobel_top\\sobel_top.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "04/25/26 23:40:12",
+ "timestampMillis": "1777174812572",
+ "buildStep": {
+  "cmdId": "d31270ef-03d6-4b83-a80a-aa821e8851e6",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\57778\\Desktop\\sobel\\sobel\\sobel_top\\logs\\sobel_top.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\Users\\57778\\Desktop\\sobel\\sobel\\hls_config.cfg --work_dir sobel_top ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\Users\\57778\\Desktop\\sobel\\sobel\\hls_config.cfg",
+   "--work_dir",
+   "sobel_top"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\57778\\Desktop\\sobel\\sobel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "04/25/26 23:40:12",
+ "timestampMillis": "1777174812573",
+ "status": {
+  "cmdId": "d31270ef-03d6-4b83-a80a-aa821e8851e6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "04/25/26 23:40:26",
+ "timestampMillis": "1777174826489",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sobel_top",
+     "file": "C:/Users\\57778\\Desktop\\sobel\\sobel\\sobel_top\\sobel_top.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\57778\\Desktop\\sobel\\src\\sobel.hpp",
+     "C:/Users\\57778\\Desktop\\sobel\\src\\sobel_core.cpp",
+     "C:/Users\\57778\\Desktop\\sobel\\src\\sobel_top.cpp",
+     "C:/Users\\57778\\Desktop\\sobel\\src\\window_generator.cpp",
+     "C:/Users\\57778\\Desktop\\sobel\\src\\sobel_ref.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "04/25/26 23:40:26",
+ "timestampMillis": "1777174826494",
+ "buildStep": {
+  "cmdId": "c1d22ed2-add9-4350-be9e-245844628985",
+  "name": "",
+  "logFile": "C:/Users\\57778\\Desktop\\sobel\\sobel\\sobel_top\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\57778\\Desktop\\sobel\\sobel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "04/25/26 23:40:26",
+ "timestampMillis": "1777174826496",
+ "status": {
+  "cmdId": "c1d22ed2-add9-4350-be9e-245844628985",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "04/25/26 23:40:55",
+ "timestampMillis": "1777174855797",
+ "status": {
+  "cmdId": "c1d22ed2-add9-4350-be9e-245844628985",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "04/25/26 23:40:55",
+ "timestampMillis": "1777174855932",
+ "status": {
+  "cmdId": "d31270ef-03d6-4b83-a80a-aa821e8851e6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "04/25/26 23:40:55",
+ "timestampMillis": "1777174855933",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "04/25/26 23:40:55",
+ "timestampMillis": "1777174855934",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

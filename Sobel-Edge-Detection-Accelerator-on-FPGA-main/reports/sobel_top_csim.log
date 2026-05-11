@@ -1,0 +1,7 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Generating csim.exe
+Input image size: 784 x 786
+PASS: HLS output matches golden reference.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 616224
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

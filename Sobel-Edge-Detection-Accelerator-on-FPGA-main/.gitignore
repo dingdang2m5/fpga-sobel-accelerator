@@ -1,0 +1,38 @@
+# Editor / IDE files
+.vscode/
+**/.vscode/
+_ide/
+**/_ide/
+.idea/
+
+# clangd / language server cache
+.cache/
+**/.cache/
+compile_commands.json
+**/compile_commands.json
+
+# Vitis/Vivado generated files
+*.cache/
+**/*.cache/
+*.runs/
+**/*.runs/
+*.gen/
+**/*.gen/
+*.hw/
+**/*.hw/
+*.ip_user_files/
+**/*.ip_user_files/
+*.jou
+*.str
+dfx_runtime.txt
+**/dfx_runtime.txt
+
+# Ignore generated logs by default, but keep curated report artifacts
+*.log
+!reports/*.log
+!reports/*.rpt
+
+# HLS build outputs
+solution*/
+csim/
+cosim/
