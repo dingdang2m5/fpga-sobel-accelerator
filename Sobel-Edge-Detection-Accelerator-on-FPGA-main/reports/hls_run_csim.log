@@ -1,42 +1,70 @@
-  **** HLS Build v2025.2 6295257
-INFO: [HLS 200-2005] Using work_dir C:/Users/57778/Desktop/sobel/sobel/sobel_top 
-INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/57778/Desktop/sobel/sobel/sobel_top/vitis-comp.json
-INFO: [HLS 200-10] Creating and opening component 'C:/Users/57778/Desktop/sobel/sobel/sobel_top'.
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top/sobel_top.hlsrun_csim_summary, at Mon May 11 03:55:00 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top -config /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg -cmdlineconfig /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /eda/xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/eda/xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'hd2891' on host 'ecs06.poly.edu' (Linux_x86_64 version 4.18.0-553.89.1.el8_10.x86_64) on Mon May 11 03:55:02 EDT 2026
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.10 (Ootpa)"
+INFO: [HLS 200-10] In directory '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main'
+INFO: [HLS 200-1909] Reading HLS ini file /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top 
+INFO: [HLS 200-2006] Changing directory to /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel
+INFO: [HLS 200-1510] Running: open_project /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/sobel.hpp' from hls_config.cfg(10)
-INFO: [HLS 200-10] Adding design file 'C:/Users/57778/Desktop/sobel/src/sobel.hpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/sobel_core.cpp' from hls_config.cfg(11)
-INFO: [HLS 200-10] Adding design file 'C:/Users/57778/Desktop/sobel/src/sobel_core.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/sobel_top.cpp' from hls_config.cfg(12)
-INFO: [HLS 200-10] Adding design file 'C:/Users/57778/Desktop/sobel/src/sobel_top.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/window_generator.cpp' from hls_config.cfg(13)
-INFO: [HLS 200-10] Adding design file 'C:/Users/57778/Desktop/sobel/src/window_generator.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=../src/sobel_ref.cpp' from hls_config.cfg(14)
-INFO: [HLS 200-10] Adding design file 'C:/Users/57778/Desktop/sobel/src/sobel_ref.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=../tb/tb_sobel.cpp' from hls_config.cfg(8)
-INFO: [HLS 200-10] Adding test bench file 'C:/Users/57778/Desktop/sobel/tb/tb_sobel.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=sobel_top' from hls_config.cfg(7)
-INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/sobel.hpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/src/sobel.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/sobel_core.cpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/src/sobel_core.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/sobel_top.cpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/src/sobel_top.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/window_generator.cpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/src/window_generator.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/sobel_ref.cpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/src/sobel_ref.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=../tb/tb_sobel.cpp' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file '/home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/tb/tb_sobel.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=sobel_top' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-INFO: [HLS 200-1465] Applying config ini 'clock=125Mhz' from hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'clock=125Mhz' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(9)
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
-INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=port' from hls_config.cfg(15)
-INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=1' from hls_config.cfg(16)
-INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
-INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/57778/Desktop/sobel/sobel/sobel_top/vitis-comp.json
+INFO: [HLS 200-1465] Applying ini 'cosim.trace_level=none' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'cosim.wave_debug=0' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/hls_config.cfg(5)
+INFO: [HLS 200-1510] Running: apply_ini /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /home/hd2891/Sobel-Edge-Detection-Accelerator-on-FPGA-main/sobel/sobel_top/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csim_design 
 INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../tb/tb_sobel.cpp in debug mode
+   Compiling ../../../../../src/sobel_ref.cpp in debug mode
+   Compiling ../../../../../src/window_generator.cpp in debug mode
+   Compiling ../../../../../src/sobel_top.cpp in debug mode
+   Compiling ../../../../../src/sobel_core.cpp in debug mode
    Generating csim.exe
 Input image size: 784 x 786
 PASS: HLS output matches golden reference.
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 616224
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 5 seconds. Total elapsed time: 13.387 seconds; peak allocated memory: 151.902 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 22s
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 8.51 seconds. CPU system time: 1.01 seconds. Elapsed time: 9.98 seconds; current allocated memory: 1.000 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 10.28 seconds. Total CPU system time: 1.33 seconds. Total elapsed time: 11.99 seconds; peak allocated memory: 275.527 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon May 11 03:55:14 2026...
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 17s

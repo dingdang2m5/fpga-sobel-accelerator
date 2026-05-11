@@ -1,4 +1,10 @@
 INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_sobel.cpp in debug mode
+   Compiling ../../../../../src/sobel_ref.cpp in debug mode
+   Compiling ../../../../../src/window_generator.cpp in debug mode
+   Compiling ../../../../../src/sobel_top.cpp in debug mode
+   Compiling ../../../../../src/sobel_core.cpp in debug mode
    Generating csim.exe
 Input image size: 784 x 786
 PASS: HLS output matches golden reference.
