@@ -335,6 +335,53 @@ The design uses only two BRAM blocks for the line buffers and a small amount of 
 
 ![Csynth](./images/utilize.png)
 
+## Post-Implementation Results
+
+After Vivado place-and-route on the full system (PS + AXI DMA + Sobel IP), the
+implemented design was verified against two committed reports:
+`reports/design_1_sobel_top_0_0_utilization_synth.rpt` and
+`reports/design_1_wrapper_timing_summary_routed.rpt`.
+
+### Timing: HLS Estimate vs Post-Implementation
+
+| Metric                     |   HLS Estimate | Post-Implementation |
+| -------------------------- | -------------: | ------------------: |
+| Clock period target        |        8.00 ns |   20.00 ns (50 MHz) |
+| Worst Negative Slack (WNS) | +2.20 ns (met) |    +10.114 ns (met) |
+| Worst Hold Slack (WHS)     |              — |     +0.028 ns (met) |
+| Failing endpoints          |              0 |                   0 |
+
+The system-level clock runs at **50 MHz** (20 ns period) on the PYNQ-Z2, which
+is the PS-derived `clk_fpga_0`. This is more conservative than the 125 MHz HLS
+target because the full Block Design includes the PS7, AXI DMA, and
+interconnect, and Vivado selects the default PS clock for system integration.
+The WNS of **+10.114 ns** means the critical path only takes 9.886 ns out of
+the 20 ns budget — a comfortable 50% timing margin. All 11,281 setup endpoints
+and all hold endpoints pass with zero violations, confirming the routed design
+is fully timing-clean.
+
+### Resource: HLS Estimate vs Post-Implementation (Sobel IP only)
+
+| Resource | HLS Estimate | Post-Impl (Sobel IP) | Available | Post-Impl % |
+| -------- | -----------: | -------------------: | --------: | ----------: |
+| LUT      |        1,837 |                  595 |    53,200 |       1.12% |
+| FF       |        1,197 |                  713 |   106,400 |       0.67% |
+| BRAM_18K |            2 |                    2 |       280 |       0.71% |
+| DSP      |            1 |                    1 |       220 |       0.45% |
+
+The post-implementation LUT count (595) is significantly lower than the HLS
+estimate (1,837) because Vivado's physical optimization and LUT combining passes
+eliminate redundant logic that HLS conservatively reports. FF count also drops
+from 1,197 to 713 for the same reason. BRAM and DSP counts match exactly — both
+are hard resources that are not affected by logic optimization. The two RAMB18E1
+primitives correspond directly to `linebuf0` and `linebuf1`, confirming the
+`BIND_STORAGE` pragma was honored. The single DSP48E1 corresponds to the
+accumulator in the Sobel magnitude path.
+
+Overall the Sobel IP consumes under 2% of any resource category on the
+xc7z020, leaving ample headroom for future extensions such as multi-channel
+processing or Canny edge detection.
+
 ---
 
 ## Performance Summary
