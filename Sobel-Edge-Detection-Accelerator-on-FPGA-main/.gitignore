@@ -9,3 +9,12 @@
 **/hls/impl/
 *.jou
 *.str
+# Vitis HLS 工作目录（运行产物）
+sobel/sobel_top/
+vitis-comp.json
+*.hlscompile_summary
+*.hlsrun_csim_summary
+*.hlsrun_package_summary
+*.pb3
+hls_data.json
+config.cmdline
