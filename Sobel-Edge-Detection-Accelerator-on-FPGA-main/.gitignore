@@ -18,3 +18,8 @@ vitis-comp.json
 *.pb3
 hls_data.json
 config.cmdline
+sobel_pynz2/*.srcs/
+sobel_pynz2/*.hw/
+sobel_pynz2/*.cache/
+sobel_pynz2/*.runs/
+sobel_pynz2/*.gen/
