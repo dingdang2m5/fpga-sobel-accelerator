@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon May 11 03:55:29 2026
+| Host         : LAPTOP-SR42HQDM running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_sobel_accel_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_sobel_accel_0_0 (vicky:hls:sobel_accel:1.0) from (Rev. 2114603497) to (Rev. 2114603574)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon May 11 02:43:02 2026
+| Host         : LAPTOP-SR42HQDM running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_sobel_accel_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_sobel_accel_0_0 (vicky:hls:sobel_accel:1.0) from (Rev. 2114603371) to (Rev. 2114603497)
+

@@ -1,0 +1,273 @@
+
+
+================================================================
+== Vitis HLS Report for 'sobel_accel_Pipeline_ROW_LOOP_COL_LOOP'
+================================================================
+* Date:           Mon May 11 03:51:26 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        sobel_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.921 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ROW_LOOP_COL_LOOP  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    834|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        2|    -|       0|      0|    0|
+|Multiplexer      |        -|    -|       0|    178|    -|
+|Register         |        -|    -|     801|    128|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        2|    0|     801|   1140|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------------------------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |                           Memory                          |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------------------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |sobel_accel_stream_stream_axis_0_int_int_int_line_buf_1_U  |sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_sobel_accel_stream_stream_axis_0_int_ibkb  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |sobel_accel_stream_stream_axis_0_int_int_int_line_buf_U    |sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_sobel_accel_stream_stream_axis_0_int_ibkb  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    +-----------------------------------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                                                      |                                                                                  |        2|  0|   0|    0|  3840|   16|     2|        30720|
+    +-----------------------------------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln29_1_fu_416_p2              |         +|   0|  0|  38|          31|           1|
+    |add_ln29_fu_402_p2                |         +|   0|  0|  71|          64|           1|
+    |add_ln30_fu_534_p2                |         +|   0|  0|  12|          11|           1|
+    |add_ln56_fu_734_p2                |         +|   0|  0|  11|          11|          11|
+    |add_ln57_fu_714_p2                |         +|   0|  0|  14|           9|           9|
+    |add_ln60_fu_792_p2                |         +|   0|  0|  11|          11|          11|
+    |gx_fu_740_p2                      |         +|   0|  0|  11|          11|          11|
+    |gy_fu_798_p2                      |         +|   0|  0|  11|          11|          11|
+    |sum_mag_fu_862_p2                 |         +|   0|  0|  12|          12|          12|
+    |sub_ln55_fu_724_p2                |         -|   0|  0|  13|          10|          10|
+    |sub_ln56_fu_686_p2                |         -|   0|  0|  14|           9|           9|
+    |sub_ln59_fu_746_p2                |         -|   0|  0|  14|           9|           9|
+    |sub_ln60_fu_764_p2                |         -|   0|  0|  14|           9|           9|
+    |sub_ln61_fu_782_p2                |         -|   0|  0|  14|           9|           9|
+    |sub_ln63_fu_822_p2                |         -|   0|  0|  12|           1|          11|
+    |sub_ln64_fu_846_p2                |         -|   0|  0|  12|           1|          11|
+    |and_ln53_fu_804_p2                |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |       and|   0|  0|   2|           1|           1|
+    |out_pixel_last_fu_528_p2          |       and|   0|  0|   2|           1|           1|
+    |output_pixel_2_fu_877_p2          |       and|   0|  0|   2|           1|           1|
+    |addr_cmp41_fu_482_p2              |      icmp|   0|  0|  71|          64|          64|
+    |addr_cmp_fu_491_p2                |      icmp|   0|  0|  71|          64|          64|
+    |cmp105_fu_460_p2                  |      icmp|   0|  0|  39|          32|          32|
+    |first_iter_0_fu_438_p2            |      icmp|   0|  0|  12|          11|           1|
+    |icmp_fu_454_p2                    |      icmp|   0|  0|  37|          30|           1|
+    |icmp_ln29_fu_382_p2               |      icmp|   0|  0|  71|          64|          64|
+    |icmp_ln30_1_fu_618_p2             |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln30_fu_397_p2               |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln53_fu_517_p2               |      icmp|   0|  0|  13|          10|           1|
+    |icmp_ln82_fu_523_p2               |      icmp|   0|  0|  39|          32|          32|
+    |output_pixel_fu_872_p2            |      icmp|   0|  0|  23|          16|          16|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
+    |abs_gx_fu_827_p3                  |    select|   0|  0|  11|           1|          11|
+    |abs_gy_fu_851_p3                  |    select|   0|  0|  11|           1|          11|
+    |out_stream_TDATA                  |    select|   0|  0|   2|           1|           2|
+    |reuse_select42_fu_588_p3          |    select|   0|  0|   8|           1|           8|
+    |reuse_select_fu_598_p3            |    select|   0|  0|   8|           1|           8|
+    |select_ln29_1_fu_422_p3           |    select|   0|  0|  31|           1|          31|
+    |select_ln29_fu_408_p3             |    select|   0|  0|  11|           1|          11|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 834|         620|         565|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                                        Name                                                       | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                                                                                        |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                                                                                            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter3                                                                                            |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_10_reg_335  |  14|          3|    8|         24|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_6_reg_299   |  14|          3|    8|         24|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_7_reg_308   |  14|          3|    8|         24|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_8_reg_317   |  14|          3|    8|         24|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_9_reg_326   |  14|          3|    8|         24|
+    |in_stream_TDATA_blk_n                                                                                              |   9|          2|    1|          2|
+    |indvar_flatten_fu_154                                                                                              |   9|          2|   64|        128|
+    |out_stream_TDATA_blk_n                                                                                             |   9|          2|    1|          2|
+    |reuse_addr_reg38_fu_130                                                                                            |   9|          2|   64|        128|
+    |reuse_addr_reg_fu_138                                                                                              |   9|          2|   64|        128|
+    |reuse_reg37_fu_134                                                                                                 |   9|          2|    8|         16|
+    |reuse_reg_fu_142                                                                                                   |   9|          2|    8|         16|
+    |x_fu_146                                                                                                           |   9|          2|   11|         22|
+    |y_fu_150                                                                                                           |   9|          2|   31|         62|
+    +-------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                                              | 178|         39|  295|        630|
+    +-------------------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                        Name                                                       | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln30_reg_1067                                                                                                  |  11|   0|   11|          0|
+    |addr_cmp41_reg_1041                                                                                                |   1|   0|    1|          0|
+    |addr_cmp_reg_1052                                                                                                  |   1|   0|    1|          0|
+    |ap_CS_fsm                                                                                                          |   1|   0|    1|          0|
+    |ap_done_reg                                                                                                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                                                                                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                                                                                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                                                                                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                                                                                            |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg                                                                                   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg                                                                                   |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_10_reg_335  |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_6_reg_299   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_7_reg_308   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_8_reg_317   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter1_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_9_reg_326   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_10_reg_335  |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_6_reg_299   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_7_reg_308   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_8_reg_317   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter2_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_9_reg_326   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_10_reg_335  |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_6_reg_299   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_7_reg_308   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_8_reg_317   |   8|   0|    8|          0|
+    |ap_phi_reg_pp0_iter3_p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_9_reg_326   |   8|   0|    8|          0|
+    |curr_pixel_data_reg_1020                                                                                           |   8|   0|    8|          0|
+    |curr_pixel_data_reg_1020_pp0_iter2_reg                                                                             |   8|   0|    8|          0|
+    |curr_pixel_user_reg_1030                                                                                           |   1|   0|    1|          0|
+    |empty_18_fu_158                                                                                                    |   8|   0|    8|          0|
+    |empty_19_fu_162                                                                                                    |   8|   0|    8|          0|
+    |empty_20_fu_166                                                                                                    |   8|   0|    8|          0|
+    |empty_21_fu_170                                                                                                    |   8|   0|    8|          0|
+    |empty_22_fu_174                                                                                                    |   8|   0|    8|          0|
+    |empty_23_fu_178                                                                                                    |   8|   0|    8|          0|
+    |first_iter_0_reg_1011                                                                                              |   1|   0|    1|          0|
+    |gx_reg_1128                                                                                                        |  11|   0|   11|          0|
+    |gy_reg_1135                                                                                                        |  11|   0|   11|          0|
+    |icmp_ln29_reg_1007                                                                                                 |   1|   0|    1|          0|
+    |icmp_ln53_reg_1057                                                                                                 |   1|   0|    1|          0|
+    |icmp_reg_1015                                                                                                      |   1|   0|    1|          0|
+    |indvar_flatten_fu_154                                                                                              |  64|   0|   64|          0|
+    |out_pixel_last_reg_1062                                                                                            |   1|   0|    1|          0|
+    |p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E                                  |   8|   0|    8|          0|
+    |p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_1                                |   8|   0|    8|          0|
+    |p_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0E_2                                |   8|   0|    8|          0|
+    |reuse_addr_reg38_fu_130                                                                                            |  64|   0|   64|          0|
+    |reuse_addr_reg_fu_138                                                                                              |  64|   0|   64|          0|
+    |reuse_reg37_fu_134                                                                                                 |   8|   0|    8|          0|
+    |reuse_reg_fu_142                                                                                                   |   8|   0|    8|          0|
+    |reuse_select42_reg_1114                                                                                            |   8|   0|    8|          0|
+    |reuse_select_reg_1120                                                                                              |   8|   0|    8|          0|
+    |sobel_accel_stream_stream_axis_0_int_int_int_line_buf_1_addr_reg_1035                                              |  11|   0|   11|          0|
+    |sobel_accel_stream_stream_axis_0_int_int_int_line_buf_addr_reg_1046                                                |  11|   0|   11|          0|
+    |x_fu_146                                                                                                           |  11|   0|   11|          0|
+    |y_fu_150                                                                                                           |  31|   0|   31|          0|
+    |curr_pixel_user_reg_1030                                                                                           |  64|  32|    1|          0|
+    |icmp_ln53_reg_1057                                                                                                 |  64|  32|    1|          0|
+    |icmp_reg_1015                                                                                                      |  64|  32|    1|          0|
+    |out_pixel_last_reg_1062                                                                                            |  64|  32|    1|          0|
+    +-------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                              | 801| 128|  549|          0|
+    +-------------------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  sobel_accel_Pipeline_ROW_LOOP_COL_LOOP|  return value|
+|in_stream_TVALID   |   in|    1|        axis|                      in_stream_V_data_V|       pointer|
+|in_stream_TDATA    |   in|    8|        axis|                      in_stream_V_data_V|       pointer|
+|out_stream_TREADY  |   in|    1|        axis|                     out_stream_V_data_V|       pointer|
+|out_stream_TDATA   |  out|    8|        axis|                     out_stream_V_data_V|       pointer|
+|mul_ln6            |   in|   64|     ap_none|                                 mul_ln6|        scalar|
+|cmp2139            |   in|    1|     ap_none|                                 cmp2139|        scalar|
+|sub104             |   in|   32|     ap_none|                                  sub104|        scalar|
+|in_stream_TREADY   |  out|    1|        axis|                      in_stream_V_dest_V|       pointer|
+|in_stream_TDEST    |   in|    1|        axis|                      in_stream_V_dest_V|       pointer|
+|in_stream_TKEEP    |   in|    1|        axis|                      in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB    |   in|    1|        axis|                      in_stream_V_strb_V|       pointer|
+|in_stream_TUSER    |   in|    1|        axis|                      in_stream_V_user_V|       pointer|
+|in_stream_TLAST    |   in|    1|        axis|                      in_stream_V_last_V|       pointer|
+|in_stream_TID      |   in|    1|        axis|                        in_stream_V_id_V|       pointer|
+|empty              |   in|   16|     ap_none|                                   empty|        scalar|
+|sub107             |   in|   32|     ap_none|                                  sub107|        scalar|
+|out_stream_TVALID  |  out|    1|        axis|                     out_stream_V_dest_V|       pointer|
+|out_stream_TDEST   |  out|    1|        axis|                     out_stream_V_dest_V|       pointer|
+|out_stream_TKEEP   |  out|    1|        axis|                     out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB   |  out|    1|        axis|                     out_stream_V_strb_V|       pointer|
+|out_stream_TUSER   |  out|    1|        axis|                     out_stream_V_user_V|       pointer|
+|out_stream_TLAST   |  out|    1|        axis|                     out_stream_V_last_V|       pointer|
+|out_stream_TID     |  out|    1|        axis|                       out_stream_V_id_V|       pointer|
+|width              |   in|   32|     ap_none|                                   width|        scalar|
++-------------------+-----+-----+------------+----------------------------------------+--------------+
+

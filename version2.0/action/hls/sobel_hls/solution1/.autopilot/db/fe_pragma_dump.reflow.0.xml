@@ -1,0 +1,29 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="F:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="F:/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot\etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="sobel_accel.cpp" line="31" pragmaType="pipeline" parentfunction="sobel_accel" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sobel_accel.cpp" line="14" pragmaType="interface" parentfunction="sobel_accel" mode="axis" port="in_stream" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="sobel_accel.cpp" line="15" pragmaType="interface" parentfunction="sobel_accel" mode="axis" port="out_stream" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="sobel_accel.cpp" line="16" pragmaType="interface" parentfunction="sobel_accel" mode="s_axilite" port="width" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sobel_accel.cpp" line="17" pragmaType="interface" parentfunction="sobel_accel" mode="s_axilite" port="height" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sobel_accel.cpp" line="18" pragmaType="interface" parentfunction="sobel_accel" mode="s_axilite" port="threshold" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sobel_accel.cpp" line="19" pragmaType="interface" parentfunction="sobel_accel" mode="s_axilite" port="" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sobel_accel.cpp" line="23" pragmaType="array_partition" parentfunction="sobel_accel" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iiiE8line_buf"/>
+<pragma file="sobel_accel.cpp" line="26" pragmaType="array_partition" parentfunction="sobel_accel" dim="0" factor="0" mode="complete" dynamic="0" variable="_ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iiiE6window"/>
+</pragmas>

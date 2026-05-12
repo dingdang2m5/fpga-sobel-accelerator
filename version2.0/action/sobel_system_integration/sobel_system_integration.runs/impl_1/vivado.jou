@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon May 11 04:45:34 2026
+# Process ID: 6276
+# Current directory: F:/nyuhomework/hardware/project/action/sobel_system_integration/sobel_system_integration.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: F:/nyuhomework/hardware/project/action/sobel_system_integration/sobel_system_integration.runs/impl_1/design_1_wrapper.vdi
+# Journal file: F:/nyuhomework/hardware/project/action/sobel_system_integration/sobel_system_integration.runs/impl_1\vivado.jou
+# Running On        :LAPTOP-SR42HQDM
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 4800H with Radeon Graphics         
+# CPU Frequency     :2895 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :17042 MB
+# Swap memory       :11986 MB
+# Total Virtual     :29029 MB
+# Available Virtual :5921 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

@@ -1,0 +1,31 @@
+{
+    "0": {
+        "name": "sobel_accel",
+        "file": "sobel_accel.cpp",
+        "fileloc": "6",
+        "instructions": "42",
+        "total_instructions": "200",
+        "calls": "1",
+        "basicblocks": "1"
+    },
+    "1": {
+        "name": "sobel_accel_Pipeline_ROW_LOOP_COL_LOOP",
+        "file": "sobel_accel.cpp",
+        "fileloc": "29",
+        "instructions": "158",
+        "total_instructions": "158",
+        "calls": "",
+        "basicblocks": "10",
+        "loads": {
+            "G": "5",
+            "L": "13"
+        },
+        "stores": {
+            "G": "5",
+            "L": "20"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

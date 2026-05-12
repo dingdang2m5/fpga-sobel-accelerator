@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon May 11 07:13:30 2026
+# Process ID: 10012
+# Current directory: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/sim/verilog/vivado.log
+# Journal file: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/sim/verilog\vivado.jou
+# Running On        :LAPTOP-SR42HQDM
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 4800H with Radeon Graphics         
+# CPU Frequency     :2895 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :17042 MB
+# Swap memory       :10427 MB
+# Total Virtual     :27469 MB
+# Available Virtual :3238 MB
+#-----------------------------------------------------------
+start_guissource open_wave.tclopen_wave_config F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/sim/verilog/sobel_accel.wcfg
+close_sim

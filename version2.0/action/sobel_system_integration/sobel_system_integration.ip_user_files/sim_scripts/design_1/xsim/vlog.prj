@@ -1,0 +1,20 @@
+verilog xil_defaultlib --include "F:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/b28c/hdl" --include "../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog" --include "../../../../sobel_system_integration.gen/sources_1/bd/design_1/ip/design_1_sobel_accel_0_0/drivers/sobel_accel_v1_0/src" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_CTRL_s_axi.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_flow_control_loop_pipe_sequential_init.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_hls_deadlock_idx0_monitor.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_hls_deadlock_idx1_monitor.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_mul_32ns_32ns_64_1_1.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_regslice_both.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_sobel_accel_stream_stream_axis_0_int_ibkb.v" \
+"../../../../sobel_system_integration.gen/sources_1/bd/design_1/ipshared/5832/hdl/verilog/sobel_accel.v" \
+"../../../bd/design_1/ip/design_1_sobel_accel_0_0/sim/design_1_sobel_accel_0_0.v" \
+"../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

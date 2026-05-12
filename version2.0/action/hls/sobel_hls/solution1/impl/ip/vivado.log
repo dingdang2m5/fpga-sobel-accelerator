@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon May 11 08:19:45 2026
+# Process ID: 23160
+# Current directory: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/vivado.log
+# Journal file: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip\vivado.jou
+# Running On        :LAPTOP-SR42HQDM
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 4800H with Radeon Graphics         
+# CPU Frequency     :2895 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :17042 MB
+# Swap memory       :6367 MB
+# Total Virtual     :23410 MB
+# Available Virtual :4230 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/solution1_data.json outdir=F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip srcdir=F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/misc
+INFO: Copied 11 verilog file(s) to F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/hdl/verilog
+INFO: Copied 7 vhdl file(s) to F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 522.469 ; gain = 193.121
+INFO: Import ports from HDL: F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/hdl/vhdl/sobel_accel.vhd (sobel_accel)
+INFO: Add axi4lite interface s_axi_CTRL
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add axi4stream interface in_stream
+INFO: Add axi4stream interface out_stream
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/component.xml
+INFO: Created IP archive F:/nyuhomework/hardware/project/action/hls/sobel_hls/solution1/impl/ip/vicky_hls_sobel_accel_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 08:19:56 2026...

@@ -1,0 +1,40 @@
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:1315:7: warning: Added loop label VITIS_LOOP_1223_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1223_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:1315:7: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2289:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2289:5: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2303:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2303:5: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2317:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:2317:5: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:3946:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:3946:7: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9816:13: warning: Added loop label VITIS_LOOP_38_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < 2; i++) {
+            ^~~
+            VITIS_LOOP_38_1: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9816:13: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9822:13: warning: Added loop label VITIS_LOOP_44_2:   [xilinx-label-all-loops]
+            for (int r = 0; r < 3; r++) {
+            ^~~
+            VITIS_LOOP_44_2: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9822:13: note: FIX-IT applied suggested code changes
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9823:17: warning: Added loop label VITIS_LOOP_45_3:   [xilinx-label-all-loops]
+                for (int c = 0; c < 2; c++) {
+                ^~~
+                VITIS_LOOP_45_3: 
+F:\nyuhomework\hardware\project\action\hls\sobel_hls\solution1\.autopilot\db\sobel_accel.pp.0.cpp:9823:17: note: FIX-IT applied suggested code changes

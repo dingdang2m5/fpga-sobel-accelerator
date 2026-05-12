@@ -1,0 +1,152 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 38, Column: 30 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_38_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 44, Column: 30 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_44_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 45, Column: 34 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_45_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 12, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_38_1
+  - String:          ''' ('
+  - LoopLoc:         'sobel_accel.cpp:38:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 12, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_44_2
+  - String:          ''' ('
+  - LoopLoc:         'sobel_accel.cpp:44:30'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 12, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_45_3
+  - String:          ''' ('
+  - LoopLoc:         'sobel_accel.cpp:45:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 12, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_45_3
+  - String:          ''' ('
+  - LoopLoc:         'sobel_accel.cpp:45:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sobel_accel.cpp, Line: 12, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_45_3
+  - String:          ''' ('
+  - LoopLoc:         'sobel_accel.cpp:45:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sobel_accel
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sobel_accel.cpp, Line: 25, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iiiE6window
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sobel_accel.cpp, Line: 22, Column: 0 }
+Function:        _Z11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iii
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ11sobel_accelRN3hls6streamINS_4axisI7ap_uintILi8EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_iiiE8line_buf
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

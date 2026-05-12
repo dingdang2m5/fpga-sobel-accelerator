@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sobel_accel.cpp" path="F:\nyuhomework\hardware\project\action\hls\sobel_accel.cpp"/>
+    <originFiles name="sobel_accel.h" path="F:\nyuhomework\hardware\project\action\hls\sobel_accel.h"/>
+  </source>
+  <testbench>
+    <originFiles name="sobel_tb.cpp" path="F:\nyuhomework\hardware\project\action\hls\sobel_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

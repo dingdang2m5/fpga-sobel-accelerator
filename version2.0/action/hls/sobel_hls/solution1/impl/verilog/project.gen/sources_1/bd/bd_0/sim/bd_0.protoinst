@@ -1,0 +1,65 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/in_stream": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "in_stream_TDATA[7:0]"},
+						"TDEST": { "actual": "in_stream_TDEST[0:0]"},
+						"TID": { "actual": "in_stream_TID[0:0]"},
+						"TKEEP": { "actual": "in_stream_TKEEP[0:0]"},
+						"TLAST": { "actual": "in_stream_TLAST[0:0]"},
+						"TREADY": { "actual": "in_stream_TREADY"},
+						"TSTRB": { "actual": "in_stream_TSTRB[0:0]"},
+						"TUSER": { "actual": "in_stream_TUSER[0:0]"},
+						"TVALID": { "actual": "in_stream_TVALID"}
+					}
+				},
+				"/hls_inst/out_stream": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "out_stream_TDATA[7:0]"},
+						"TDEST": { "actual": "out_stream_TDEST[0:0]"},
+						"TID": { "actual": "out_stream_TID[0:0]"},
+						"TKEEP": { "actual": "out_stream_TKEEP[0:0]"},
+						"TLAST": { "actual": "out_stream_TLAST[0:0]"},
+						"TREADY": { "actual": "out_stream_TREADY"},
+						"TSTRB": { "actual": "out_stream_TSTRB[0:0]"},
+						"TUSER": { "actual": "out_stream_TUSER[0:0]"},
+						"TVALID": { "actual": "out_stream_TVALID"}
+					}
+				},
+				"/hls_inst/s_axi_CTRL": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARADDR": { "actual": "s_axi_CTRL_ARADDR[5:0]"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"ARREADY": { "actual": "s_axi_CTRL_ARREADY"},
+						"ARVALID": { "actual": "s_axi_CTRL_ARVALID"},
+						"AWADDR": { "actual": "s_axi_CTRL_AWADDR[5:0]"},
+						"AWREADY": { "actual": "s_axi_CTRL_AWREADY"},
+						"AWVALID": { "actual": "s_axi_CTRL_AWVALID"},
+						"BREADY": { "actual": "s_axi_CTRL_BREADY"},
+						"BRESP": { "actual": "s_axi_CTRL_BRESP[1:0]"},
+						"BVALID": { "actual": "s_axi_CTRL_BVALID"},
+						"RDATA": { "actual": "s_axi_CTRL_RDATA[31:0]"},
+						"RREADY": { "actual": "s_axi_CTRL_RREADY"},
+						"RRESP": { "actual": "s_axi_CTRL_RRESP[1:0]"},
+						"RVALID": { "actual": "s_axi_CTRL_RVALID"},
+						"WDATA": { "actual": "s_axi_CTRL_WDATA[31:0]"},
+						"WREADY": { "actual": "s_axi_CTRL_WREADY"},
+						"WSTRB": { "actual": "s_axi_CTRL_WSTRB[3:0]"},
+						"WVALID": { "actual": "s_axi_CTRL_WVALID"}
+					}
+				}
+			}
+		}
+	}
+}

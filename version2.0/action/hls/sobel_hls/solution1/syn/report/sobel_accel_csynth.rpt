@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vitis HLS Report for 'sobel_accel'
+================================================================
+* Date:           Mon May 11 03:51:26 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        sobel_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.510 ns|     1.25 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                                   |                                        |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                      Instance                     |                 Module                 |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106  |sobel_accel_Pipeline_ROW_LOOP_COL_LOOP  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    119|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        2|    4|     951|   1392|    0|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     40|    -|
+|Register         |        -|    -|     215|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        2|    4|    1166|   1551|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    1|       1|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |                      Instance                     |                 Module                 | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +---------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |CTRL_s_axi_U                                       |CTRL_s_axi                              |        0|   0|  150|   232|    0|
+    |mul_32ns_32ns_64_1_1_U22                           |mul_32ns_32ns_64_1_1                    |        0|   4|    0|    20|    0|
+    |grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106  |sobel_accel_Pipeline_ROW_LOOP_COL_LOOP  |        2|   0|  801|  1140|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |Total                                              |                                        |        2|   4|  951|  1392|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                            Variable Name                            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |sub104_fu_170_p2                                                     |         +|   0|  0|  39|          32|           2|
+    |sub107_fu_176_p2                                                     |         +|   0|  0|  39|          32|           2|
+    |grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106_out_stream_TREADY  |       and|   0|  0|   2|           1|           1|
+    |cmp2139_fu_182_p2                                                    |      icmp|   0|  0|  39|          32|           1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                |          |   0|  0| 119|          97|           6|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  31|          6|    1|          6|
+    |in_stream_TREADY_int_regslice  |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          |  40|          8|    2|          8|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |                              Name                              | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                       |   5|   0|    5|          0|
+    |cmp2139_reg_222                                                 |   1|   0|    1|          0|
+    |empty_reg_202                                                   |  16|   0|   16|          0|
+    |grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106_ap_start_reg  |   1|   0|    1|          0|
+    |height_read_reg_188                                             |  32|   0|   32|          0|
+    |mul_ln6_reg_207                                                 |  64|   0|   64|          0|
+    |sub104_reg_212                                                  |  32|   0|   32|          0|
+    |sub107_reg_217                                                  |  32|   0|   32|          0|
+    |width_read_reg_194                                              |  32|   0|   32|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                           | 215|   0|  215|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+---------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++--------------------+-----+-----+------------+---------------------+--------------+
+|s_axi_CTRL_AWVALID  |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_AWREADY  |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_AWADDR   |   in|    6|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WVALID   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WREADY   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WDATA    |   in|   32|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_WSTRB    |   in|    4|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARVALID  |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARREADY  |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_ARADDR   |   in|    6|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RVALID   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RREADY   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RDATA    |  out|   32|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_RRESP    |  out|    2|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BVALID   |  out|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BREADY   |   in|    1|       s_axi|                 CTRL|        scalar|
+|s_axi_CTRL_BRESP    |  out|    2|       s_axi|                 CTRL|        scalar|
+|ap_clk              |   in|    1|  ap_ctrl_hs|          sobel_accel|  return value|
+|ap_rst_n            |   in|    1|  ap_ctrl_hs|          sobel_accel|  return value|
+|interrupt           |  out|    1|  ap_ctrl_hs|          sobel_accel|  return value|
+|in_stream_TDATA     |   in|    8|        axis|   in_stream_V_data_V|       pointer|
+|in_stream_TVALID    |   in|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TREADY    |  out|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TDEST     |   in|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TKEEP     |   in|    1|        axis|   in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB     |   in|    1|        axis|   in_stream_V_strb_V|       pointer|
+|in_stream_TUSER     |   in|    1|        axis|   in_stream_V_user_V|       pointer|
+|in_stream_TLAST     |   in|    1|        axis|   in_stream_V_last_V|       pointer|
+|in_stream_TID       |   in|    1|        axis|     in_stream_V_id_V|       pointer|
+|out_stream_TDATA    |  out|    8|        axis|  out_stream_V_data_V|       pointer|
+|out_stream_TVALID   |  out|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TREADY   |   in|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TDEST    |  out|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TKEEP    |  out|    1|        axis|  out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB    |  out|    1|        axis|  out_stream_V_strb_V|       pointer|
+|out_stream_TUSER    |  out|    1|        axis|  out_stream_V_user_V|       pointer|
+|out_stream_TLAST    |  out|    1|        axis|  out_stream_V_last_V|       pointer|
+|out_stream_TID      |  out|    1|        axis|    out_stream_V_id_V|       pointer|
++--------------------+-----+-----+------------+---------------------+--------------+
+

@@ -1,0 +1,45 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon May 11 08:22:34 2026
+| Host         : LAPTOP-SR42HQDM running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/sobel_accel_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                               Instance                              |                                                     Module                                                     | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                                        |                                                                                                          (top) |        573 |        569 |       0 |    4 | 714 |      0 |      2 |          4 |
+|   bd_0_i                                                            |                                                                                                           bd_0 |        573 |        569 |       0 |    4 | 714 |      0 |      2 |          4 |
+|     hls_inst                                                        |                                                                                                bd_0_hls_inst_0 |        573 |        569 |       0 |    4 | 714 |      0 |      2 |          4 |
+|       (hls_inst)                                                    |                                                                                                bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       inst                                                          |                                                                                    bd_0_hls_inst_0_sobel_accel |        573 |        569 |       0 |    4 | 714 |      0 |      2 |          4 |
+|         (inst)                                                      |                                                                                    bd_0_hls_inst_0_sobel_accel |         80 |         80 |       0 |    0 | 185 |      0 |      0 |          2 |
+|         CTRL_s_axi_U                                                |                                                                         bd_0_hls_inst_0_sobel_accel_CTRL_s_axi |        116 |        116 |       0 |    0 | 149 |      0 |      0 |          0 |
+|         grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106           |                                             bd_0_hls_inst_0_sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP |        283 |        279 |       0 |    4 | 337 |      0 |      2 |          0 |
+|           (grp_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_fu_106)       |                                             bd_0_hls_inst_0_sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP |        256 |        252 |       0 |    4 | 335 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U                  |                                             bd_0_hls_inst_0_sobel_accel_flow_control_loop_pipe_sequential_init |          4 |          4 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           sobel_accel_stream_stream_axis_0_int_int_int_line_buf_1_U |   bd_0_hls_inst_0_sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_sobel_accel_stream_stream_axis_0_int_ibkb |          0 |          0 |       0 |    0 |   0 |      0 |      1 |          0 |
+|           sobel_accel_stream_stream_axis_0_int_int_int_line_buf_U   | bd_0_hls_inst_0_sobel_accel_sobel_accel_Pipeline_ROW_LOOP_COL_LOOP_sobel_accel_stream_stream_axis_0_int_ibkb_3 |         23 |         23 |       0 |    0 |   0 |      0 |      1 |          0 |
+|         mul_32ns_32ns_64_1_1_U22                                    |                                                               bd_0_hls_inst_0_sobel_accel_mul_32ns_32ns_64_1_1 |         59 |         59 |       0 |    0 |   0 |      0 |      0 |          2 |
+|         regslice_both_in_stream_V_data_V_U                          |                                                                      bd_0_hls_inst_0_sobel_accel_regslice_both |         14 |         14 |       0 |    0 |  21 |      0 |      0 |          0 |
+|         regslice_both_in_stream_V_user_V_U                          |                                                      bd_0_hls_inst_0_sobel_accel_regslice_both__parameterized0 |          5 |          5 |       0 |    0 |   5 |      0 |      0 |          0 |
+|         regslice_both_out_stream_V_data_V_U                         |                                                                    bd_0_hls_inst_0_sobel_accel_regslice_both_0 |          8 |          8 |       0 |    0 |   7 |      0 |      0 |          0 |
+|         regslice_both_out_stream_V_last_V_U                         |                                                    bd_0_hls_inst_0_sobel_accel_regslice_both__parameterized0_1 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |          0 |
+|         regslice_both_out_stream_V_user_V_U                         |                                                    bd_0_hls_inst_0_sobel_accel_regslice_both__parameterized0_2 |          4 |          4 |       0 |    0 |   5 |      0 |      0 |          0 |
++---------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

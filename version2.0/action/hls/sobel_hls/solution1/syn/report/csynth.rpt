@@ -1,0 +1,177 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sobel_accel'
+================================================================
++ General Information: 
+    * Date:           Mon May 11 03:51:26 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        sobel_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+--------+-----------+-----------+-----+
+    |                  Modules                  | Issue|      | Latency | Latency| Iteration|         | Trip |          |         |        |           |           |     |
+    |                  & Loops                  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |    LUT    | URAM|
+    +-------------------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+--------+-----------+-----------+-----+
+    |+ sobel_accel                              |     -|  0.24|        -|       -|         -|        -|     -|        no|  2 (~0%)|  4 (1%)|  1166 (1%)|  1551 (2%)|    -|
+    | + sobel_accel_Pipeline_ROW_LOOP_COL_LOOP  |     -|  0.83|        -|       -|         -|        -|     -|        no|  2 (~0%)|       -|  801 (~0%)|  1140 (2%)|    -|
+    |  o ROW_LOOP_COL_LOOP                      |     -|  8.75|        -|       -|         4|        1|     -|       yes|        -|       -|          -|          -|    -|
+    +-------------------------------------------+------+------+---------+--------+----------+---------+------+----------+---------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_CTRL | 32         | 6             | 16     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_CTRL | width     | 0x10   | 32    | W      | Data signal of width             |                                                                      |
+| s_axi_CTRL | height    | 0x18   | 32    | W      | Data signal of height            |                                                                      |
+| s_axi_CTRL | threshold | 0x20   | 32    | W      | Data signal of threshold         |                                                                      |
++------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| in_stream  | in        | both          | 8     | 1     | 1   | 1     | 1     | 1      | 1     | 1     | 1      |
+| out_stream | out       | both          | 8     | 1     | 1   | 1     | 1     | 1      | 1     | 1     | 1      |
++------------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------------------------------------------------+
+| Argument   | Direction | Datatype                                               |
++------------+-----------+--------------------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_uint<8>, 1, 1, 1, '8', false>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<8>, 1, 1, 1, '8', false>, 0>& |
+| width      | in        | int                                                    |
+| height     | in        | int                                                    |
+| threshold  | in        | int                                                    |
++------------+-----------+--------------------------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+-------------------------------------+
+| Argument   | HW Interface | HW Type   | HW Info                             |
++------------+--------------+-----------+-------------------------------------+
+| in_stream  | in_stream    | interface |                                     |
+| out_stream | out_stream   | interface |                                     |
+| width      | s_axi_CTRL   | register  | name=width offset=0x10 range=32     |
+| height     | s_axi_CTRL   | register  | name=height offset=0x18 range=32    |
+| threshold  | s_axi_CTRL   | register  | name=threshold offset=0x20 range=32 |
++------------+--------------+-----------+-------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| Name                                      | DSP | Pragma | Variable       | Op     | Impl     | Latency |
++-------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| + sobel_accel                             | 4   |        |                |        |          |         |
+|   sub104_fu_170_p2                        |     |        | sub104         | add    | fabric   | 0       |
+|   sub107_fu_176_p2                        |     |        | sub107         | add    | fabric   | 0       |
+|   cmp2139_fu_182_p2                       |     |        | cmp2139        | setgt  | auto     | 0       |
+|   mul_32ns_32ns_64_1_1_U22                | 4   |        | mul_ln6        | mul    | auto     | 0       |
+|  + sobel_accel_Pipeline_ROW_LOOP_COL_LOOP | 0   |        |                |        |          |         |
+|    icmp_ln29_fu_382_p2                    |     |        | icmp_ln29      | seteq  | auto     | 0       |
+|    icmp_ln30_fu_397_p2                    |     |        | icmp_ln30      | setlt  | auto     | 0       |
+|    add_ln29_fu_402_p2                     |     |        | add_ln29       | add    | fabric   | 0       |
+|    select_ln29_fu_408_p3                  |     |        | select_ln29    | select | auto_sel | 0       |
+|    add_ln29_1_fu_416_p2                   |     |        | add_ln29_1     | add    | fabric   | 0       |
+|    select_ln29_1_fu_422_p3                |     |        | select_ln29_1  | select | auto_sel | 0       |
+|    first_iter_0_fu_438_p2                 |     |        | first_iter_0   | seteq  | auto     | 0       |
+|    icmp_fu_454_p2                         |     |        | icmp           | setne  | auto     | 0       |
+|    cmp105_fu_460_p2                       |     |        | cmp105         | seteq  | auto     | 0       |
+|    addr_cmp41_fu_482_p2                   |     |        | addr_cmp41     | seteq  | auto     | 0       |
+|    reuse_select42_fu_588_p3               |     |        | reuse_select42 | select | auto_sel | 0       |
+|    addr_cmp_fu_491_p2                     |     |        | addr_cmp       | seteq  | auto     | 0       |
+|    reuse_select_fu_598_p3                 |     |        | reuse_select   | select | auto_sel | 0       |
+|    icmp_ln53_fu_517_p2                    |     |        | icmp_ln53      | setne  | auto     | 0       |
+|    and_ln53_fu_804_p2                     |     |        | and_ln53       | and    | auto     | 0       |
+|    sub_ln56_fu_686_p2                     |     |        | sub_ln56       | sub    | fabric   | 0       |
+|    add_ln57_fu_714_p2                     |     |        | add_ln57       | add    | fabric   | 0       |
+|    sub_ln55_fu_724_p2                     |     |        | sub_ln55       | sub    | fabric   | 0       |
+|    sub_ln59_fu_746_p2                     |     |        | sub_ln59       | sub    | fabric   | 0       |
+|    sub_ln60_fu_764_p2                     |     |        | sub_ln60       | sub    | fabric   | 0       |
+|    sub_ln61_fu_782_p2                     |     |        | sub_ln61       | sub    | fabric   | 0       |
+|    sub_ln63_fu_822_p2                     |     |        | sub_ln63       | sub    | fabric   | 0       |
+|    abs_gx_fu_827_p3                       |     |        | abs_gx         | select | auto_sel | 0       |
+|    sub_ln64_fu_846_p2                     |     |        | sub_ln64       | sub    | fabric   | 0       |
+|    abs_gy_fu_851_p3                       |     |        | abs_gy         | select | auto_sel | 0       |
+|    sum_mag_fu_862_p2                      |     |        | sum_mag        | add    | fabric   | 0       |
+|    output_pixel_fu_872_p2                 |     |        | output_pixel   | setgt  | auto     | 0       |
+|    output_pixel_2_fu_877_p2               |     |        | output_pixel_2 | and    | auto     | 0       |
+|    out_stream_TDATA                       |     |        | select_ln52    | select | auto_sel | 0       |
+|    icmp_ln82_fu_523_p2                    |     |        | icmp_ln82      | seteq  | auto     | 0       |
+|    out_pixel_last_fu_528_p2               |     |        | out_pixel_last | and    | auto     | 0       |
+|    add_ln30_fu_534_p2                     |     |        | add_ln30       | add    | fabric   | 0       |
+|    icmp_ln30_1_fu_618_p2                  |     |        | icmp_ln30_1    | setlt  | auto     | 0       |
++-------------------------------------------+-----+--------+----------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------------------------------------------+-----------+-----------+------+------+--------+---------------------------------------------------------+------+---------+------------------+
+| Name                                                         | Usage     | Type      | BRAM | URAM | Pragma | Variable                                                | Impl | Latency | Bitwidth, Depth, |
+|                                                              |           |           |      |      |        |                                                         |      |         | Banks            |
++--------------------------------------------------------------+-----------+-----------+------+------+--------+---------------------------------------------------------+------+---------+------------------+
+| + sobel_accel                                                |           |           | 2    | 0    |        |                                                         |      |         |                  |
+|   CTRL_s_axi_U                                               | interface | s_axilite |      |      |        |                                                         |      |         |                  |
+|  + sobel_accel_Pipeline_ROW_LOOP_COL_LOOP                    |           |           | 2    | 0    |        |                                                         |      |         |                  |
+|    sobel_accel_stream_stream_axis_0_int_int_int_line_buf_1_U | ram_s2p   |           | 1    |      |        | sobel_accel_stream_stream_axis_0_int_int_int_line_buf_1 | auto | 1       | 8, 1920, 1       |
+|    sobel_accel_stream_stream_axis_0_int_int_int_line_buf_U   | ram_s2p   |           | 1    |      |        | sobel_accel_stream_stream_axis_0_int_int_int_line_buf   | auto | 1       | 8, 1920, 1       |
++--------------------------------------------------------------+-----------+-----------+------+------+--------+---------------------------------------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+-----------------------------------------------+
+| Type            | Options                              | Location                                      |
++-----------------+--------------------------------------+-----------------------------------------------+
+| interface       | axis port=in_stream                  | sobel_accel.cpp:14 in sobel_accel, in_stream  |
+| interface       | axis port=out_stream                 | sobel_accel.cpp:15 in sobel_accel, out_stream |
+| interface       | s_axilite port=width bundle=CTRL     | sobel_accel.cpp:16 in sobel_accel, width      |
+| interface       | s_axilite port=height bundle=CTRL    | sobel_accel.cpp:17 in sobel_accel, height     |
+| interface       | s_axilite port=threshold bundle=CTRL | sobel_accel.cpp:18 in sobel_accel, threshold  |
+| interface       | s_axilite port=return bundle=CTRL    | sobel_accel.cpp:19 in sobel_accel, return     |
+| array_partition | variable=line_buf complete dim=1     | sobel_accel.cpp:23 in sobel_accel, line_buf   |
+| array_partition | variable=window complete dim=0       | sobel_accel.cpp:26 in sobel_accel, window     |
+| pipeline        | II=1                                 | sobel_accel.cpp:31 in sobel_accel             |
++-----------------+--------------------------------------+-----------------------------------------------+
+
+
